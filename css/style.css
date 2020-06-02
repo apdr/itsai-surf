@@ -15,7 +15,6 @@ html,
 /* Center the content in the browser window */
 .container {
   margin: auto;
-  max-width: 479px;
 }
 
 .title {
