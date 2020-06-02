@@ -62,66 +62,66 @@ footer {
 	padding: 32px 8px; 
 }
 
-/* #### Mobile Phones Portrait #### */
-@media screen and (max-device-width: 480px) and (orientation: portrait){
-  /* some CSS here */
-  .container {
-  	width: 480px;
-  }
+
+/* #### Media Queries #### */
+
+@media all and (max-width: 359px) and (min-width: 0px) {
+	.container {
+		width: 320px;
+	}	
 }
 
-/* #### Mobile Phones Landscape #### */
-@media screen and (max-device-width: 640px) and (orientation: landscape){
-  /* some CSS here */
-    .container {
-  	width: 640px;
-  }
+@media all and (max-width: 374px) and (min-width: 360px) {
+	.container {
+		width: 360px;
+	}	
 }
 
-/* #### Mobile Phones Portrait or Landscape #### */
-@media screen and (max-device-width: 640px){
-  /* some CSS here */
-    .container {
-  	width: 640px;
-  }
+@media all and (max-width: 411px) and (min-width: 375px) {
+	.container {
+		width: 375px;
+	}	
 }
 
-/* #### iPhone 4+ Portrait or Landscape #### */
-@media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2){
-  /* some CSS here */
-    .container {
-  	width: 320px;
-  }
+@media all and (max-width: 479px) and (min-width: 412px) {
+	.container {
+		width: 412px;
+	}	
 }
 
-/* #### iPhone 5 Portrait or Landscape #### */
-@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2){
-  /* some CSS here */
-    .container {
-  	width: 480px;
-  }
+@media all and (max-width: 599px) and (min-width: 480px) {
+	.container {
+		width: 480px;
+	}	
 }
 
-/* #### iPhone 6 and 6 plus Portrait or Landscape #### */
-@media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3){
-  /* some CSS here */
-    .container {
-  	width: 375px;
-  }
+@media all and (max-width: 767px) and (min-width: 600px) {
+	.container {
+		width: 600px;
+	}	
 }
 
-/* #### Tablets Portrait or Landscape #### */
-@media screen and (min-device-width: 768px) and (max-device-width: 1024px){
-  /* some CSS here */
-    .container {
-  	width: 768px;
-  }
+@media all and (max-width: 799px) and (min-width: 768px) {
+	.container {
+		width: 768px;
+	}	
 }
 
-/* #### Desktops #### */
-@media screen and (min-width: 1024px){
-  /* some CSS here */
-    .container {
-  	width: 1024px;
-  }
+@media all and (max-width: 1023px) and (min-width: 800px) {
+	.container {
+		width: 800px;
+	}	
 }
+
+@media all and (min-width: 1024px) {
+	.container {
+		width: 1024px;
+	}	
+}
+
+
+
+
+
+
+
