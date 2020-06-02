@@ -1,4 +1,4 @@
-var cacheName = 'hello-pwa';
+var cacheName = 'itsai-surf';
 var filesToCache = [
   '/',
   '/index.html',
