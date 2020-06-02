@@ -75,6 +75,10 @@ img.logo {
 	font-size: 0.8em; 
 }
 
+[data-link] {
+  cursor: pointer;
+}
+
 footer {
 	padding: 32px 8px; 
 }
