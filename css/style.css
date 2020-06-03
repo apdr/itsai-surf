@@ -29,11 +29,21 @@ h3{
 	color: #99A0A5;
 }
 p {
-	font-family: 'Maven Pro', sans-serif;
 	padding: 16px 0 0 16px;
 	margin: 0;
 	line-height: 1.5rem;
+	color: #333333;
 }
+ul {
+	list-style: none;
+}
+li {
+	line-height: 1.8rem;
+	color: #333333;	
+}
+li::before {content: "•"; color: #7783F7;
+  display: inline-block; width: 1em;
+  margin-left: -1em}
 a {
 	color: #7783F7;
 	text-decoration: none;
@@ -65,7 +75,7 @@ a.retour {
 .card {
 	flex: 0 0 auto;
 	width: 160px;
-	margin: 8px 16px 0 0;
+	margin: 16px 16px 0 0;
 	border-radius: 8px;
 	border: 1px solid #f2f2f2;
 }
@@ -116,6 +126,15 @@ a.retour {
 .card > p {
 	margin: 0;
 	padding: 8px;
+}
+.intro {
+	color: #333333;
+}
+.section {
+	border: 1px solid #f2f2f2;
+	border-radius: 8px;
+	margin: 16px;
+	padding-bottom: 16px;
 }
 [data-link] {
 	cursor: pointer;
