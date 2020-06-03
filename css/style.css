@@ -43,6 +43,13 @@ p {
 	margin: 0;
 }
 
+a {
+	color: #7783F7;
+	text-decoration: none;
+	display: inline-block;
+	margin-top: 8px;
+}
+
 .is-icon {
   width: 40px;
   height: 40px;
