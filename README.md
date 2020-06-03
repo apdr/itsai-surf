@@ -1,5 +1,5 @@
 # Itsaii Surf
-Itsai Surf est une application qui vous donne des clés pour apprendre à surfer ou vous améliorer.
+Itsaii Surf est une application qui vous donne des clés pour apprendre à surfer ou vous améliorer.
 
 ## Qu'est-ce que c'est ?
 
