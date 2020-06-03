@@ -1,5 +1,6 @@
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+
 }
 
 /* Make content area fill the entire browser window */
@@ -17,25 +18,34 @@ html,
   margin: auto;
 }
 
+h1 {
+	padding: 0;
+	margin: 24px 0 0 0;
+}
+
 h2 {
-	padding: 32px 8px 4px 8px;
-	margin: 0;
+	padding: 0;
+	margin: 32px 0 0 0;
+	font-weight: 400;
 }
 
 h3{
-	padding: 24px 8px 8px 8px;
-	margin: 0;
+	padding: 0;
+	margin: 24px 0 0 0;
+	font-weight: 300;
+	color: #99A0A5;
 }
 
 p {
-	padding: 8px 8px 8px 8px;
+	font-family: 'Maven Pro', sans-serif;
+	padding: 16px 0 0 0;
 	margin: 0;
 }
 
-img.logo {
-	width: 196px;
-	margin-top: 24px;
-	margin-left: 8px;
+.is-icon {
+  width: 40px;
+  height: 40px;
+  margin: 20px 8px 0 0;
 }
 
 .title {
@@ -48,12 +58,41 @@ img.logo {
   overflow-x: auto;
 }
 
-  .card {
-    flex: 0 0 auto;
+.title-wrapper {
+  display: flex;	
+}
+
+.card {
+	flex: 0 0 auto;
     width: 160px;
-    margin-right: 16px; 
+    margin: 8px 16px 0 0;
+    border-radius: 8px;
     border: 1px solid #f2f2f2;
   }
+
+.blue1bg {
+	background-color: #4C64F6;
+}
+
+.blue2bg {
+	background-color: #7783F7;
+}
+
+.blue3bg {
+	background-color: #110F8D;
+}
+
+.orange1bg {
+	background-color: #F4A93C;
+}
+
+.rose1bg {
+	background-color: #D15074;
+}
+
+.rose2bg {
+	background-color: #E07AD6;
+}
 
 .scrolling-wrapper {
   -webkit-overflow-scrolling: touch;
@@ -63,15 +102,30 @@ img.logo {
   display: none;
 }
 
-.card > img {
-	width: 160px;
-	height: 96px;
+.card.blue1bg > p, .card.blue2bg > p, .card.blue3bg > p, .card.orange1bg > p, .card.rose1bg > p, .card.rose2bg > p {
+	color: #ffffff;
+	font-weight: 400;
+	text-align: center;	
+	margin: 0px 8px 8px 8px;	
 }
 
-.card > h4 {
-	margin: 8px;
-	padding: 0;
-	font-size: 0.8em; 
+.card.blue1bg, .card.blue2bg, .card.blue3bg, .card.orange1bg, .card.rose1bg, .card.rose2bg {
+	border: none;	
+}
+
+.card > img {
+	margin-top: 16px;
+	width: 160px;
+	height: 96px;	
+}
+
+.card > iframe {
+	border-radius: 8px 8px 0 0;
+}
+
+.card > p {
+	margin: 0;
+	padding: 8px;
 }
 
 [data-link] {
@@ -79,7 +133,7 @@ img.logo {
 }
 
 footer {
-	padding: 32px 8px; 
+	padding: 120px 0 42px 0; 
 }
 
 
