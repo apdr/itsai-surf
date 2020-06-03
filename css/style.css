@@ -16,6 +16,7 @@ html,
 /* Center the content in the browser window */
 .container {
   margin: auto;
+  padding-left: 16px;
 }
 
 h1 {
