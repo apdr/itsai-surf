@@ -1,18 +1,7 @@
-window.addEventListener('load', e => {
-  registerSW(); 
-});
-
-async function registerSW() { 
-  if ('serviceWorker' in navigator) { 
-    try {
-      await navigator.serviceWorker.register('./sw.js'); 
-    } catch (e) {
-      alert('ServiceWorker registration failed. Sorry about that.'); 
-    }
-  } else {
-    document.querySelector('.alert').removeAttribute('hidden'); 
-  }
-}
+// Registering Service Worker
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/pwa-examples/js13kpwa/sw.js');
+};
 
 $(document).ready(function() {
   $("[data-link]").click(function() {
