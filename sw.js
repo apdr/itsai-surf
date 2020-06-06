@@ -1,25 +1,59 @@
-var cacheName = 'itsaii-surf';
-var filesToCache = [
-  '/',
-  '/index.html',
-  '/css/style.css',
-  '/js/main.js'
+self.addEventListener('install', async event => {
+  console.log('install event')
+});
+
+self.addEventListener('fetch', async event => {
+  console.log('fetch event')
+});
+
+const cacheName = 'pwa-conf-v1';
+const staticAssets = [
+  './',
+  './index.html',
+  './js/main.js',
+  './css/style.css'
 ];
 
-/* Start the service worker and cache all of the app's content */
-self.addEventListener('install', function(e) {
-  e.waitUntil(
-    caches.open(cacheName).then(function(cache) {
-      return cache.addAll(filesToCache);
-    })
-  );
+self.addEventListener('install', async event => {
+  const cache = await caches.open(cacheName); 
+  await cache.addAll(staticAssets); 
 });
 
-/* Serve cached content when offline */
-self.addEventListener('fetch', function(e) {
-  e.respondWith(
-    caches.match(e.request).then(function(response) {
-      return response || fetch(e.request);
-    })
-  );
+self.addEventListener('fetch', event => {
+  const req = event.request;
+  event.respondWith(cacheFirst(req));
 });
+
+async function cacheFirst(req) {
+  const cache = await caches.open(cacheName); 
+  const cachedResponse = await cache.match(req); 
+  return cachedResponse || fetch(req); 
+}
+
+self.addEventListener('fetch', event => {
+  const req = event.request;
+
+  if (/.*(json)$/.test(req.url)) {
+    event.respondWith(networkFirst(req));
+  } else {
+    event.respondWith(cacheFirst(req));
+  }
+});
+
+async function networkFirst(req) {
+  const cache = await caches.open(cacheName);
+  try { 
+    const fresh = await fetch(req);
+    cache.put(req, fresh.clone());
+    return fresh;
+  } catch (e) { 
+    const cachedResponse = await cache.match(req);
+    return cachedResponse;
+  }
+}
+
+async function cacheFirst(req) {
+  const cache = await caches.open(cacheName);
+  const cachedResponse = await cache.match(req);
+  return cachedResponse || networkFirst(req);
+}

@@ -1,21 +1,19 @@
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js')
-  .then(function(registration) {
-    console.log('Registration successful, scope is:', registration.scope);
-  })
-  .catch(function(error) {
-    console.log('Service worker registration failed, error:', error);
-  });
+window.addEventListener('load', e => {
+  new PWAConfApp();
+  registerSW(); 
+});
+
+async function registerSW() { 
+  if ('serviceWorker' in navigator) { 
+    try {
+      await navigator.serviceWorker.register('./sw.js'); 
+    } catch (e) {
+      alert('ServiceWorker registration failed. Sorry about that.'); 
+    }
+  } else {
+    document.querySelector('.alert').removeAttribute('hidden'); 
+  }
 }
-
-// Listen for install event, set callback
-self.addEventListener('install', function(event) {
-    // Perform some task
-});
-
-self.addEventListener('activate', function(event) {
-  // Perform some task
-});
 
 $(document).ready(function() {
   $("[data-link]").click(function() {
