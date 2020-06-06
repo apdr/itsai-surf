@@ -170,17 +170,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/main.js"></script>
   <script src="sw.js"></script>
- 
-  <script type="text/javascript">  
-  // CODELAB: Register service worker.
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('sw.js')
-        .then((reg) => {
-          console.log('Service worker registered.', reg);
-        });
-  });
-}</script>
 
 </body>
 </html>
