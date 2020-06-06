@@ -1,4 +1,4 @@
-var cacheName = 'itsai-surf';
+var cacheName = 'itsaii-surf';
 var filesToCache = [
   '/',
   '/index.html',
