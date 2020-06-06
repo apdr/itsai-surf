@@ -1,5 +1,5 @@
 // Files to cache
-var cacheName = 'js13kPWA-v1';
+var cacheName = 'itsaii-surf';
 var appShellFiles = [
   './',
   './index.html',

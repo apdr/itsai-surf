@@ -1,6 +1,6 @@
 // Registering Service Worker
 if('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/pwa-examples/js13kpwa/sw.js');
+  navigator.serviceWorker.register('/itsaii-surf/sw.js');
 };
 
 $(document).ready(function() {
