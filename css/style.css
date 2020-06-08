@@ -147,6 +147,9 @@ a.retour {
 	margin: 16px;
 	padding: 0 16px 0 0;
 }
+img.fiche-desc {
+	max-width: 320px;
+}
 [data-link] {
 	cursor: pointer;
 }
